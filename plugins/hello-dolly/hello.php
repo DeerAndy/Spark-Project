@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Hello_Dolly
+ * @package by_my_side
  * @version 1.7.2
  */
 /*
@@ -12,35 +12,34 @@ Version: 1.7.2
 Author URI: http://ma.tt/
 */
 
-function hello_dolly_get_lyric() {
+function by_my_side_get_lyric() {
 	/** These are the lyrics to Hello Dolly */
-	$lyrics = "Hello, Dolly
-Well, hello, Dolly
-It's so nice to have you back where you belong
-You're lookin' swell, Dolly
-I can tell, Dolly
-You're still glowin', you're still crowin'
-You're still goin' strong
-I feel the room swayin'
-While the band's playin'
-One of our old favorite songs from way back when
-So, take her wrap, fellas
-Dolly, never go away again
-Hello, Dolly
-Well, hello, Dolly
-It's so nice to have you back where you belong
-You're lookin' swell, Dolly
-I can tell, Dolly
-You're still glowin', you're still crowin'
-You're still goin' strong
-I feel the room swayin'
-While the band's playin'
-One of our old favorite songs from way back when
-So, golly, gee, fellas
-Have a little faith in me, fellas
-Dolly, never go away
-Promise, you'll never go away
-Dolly'll never go away again";
+	$lyrics = "It's takin' time, all this fear I pushed back to move on
+Beating me like a panic attack since you've gone
+And if I never fear to be more alone, I do now
+I turn to see my faded tracks in the snow
+I've come so far with no idea where to go
+And if I never fear to be more alone, I do now
+I do now
+I need you to tell me you'll be right by my side
+When I feel alone, you'll be right by my side, ooh
+It's takin' hold of a fool with a fondness for pain
+And turn to run without a chance to explain
+And if I never thought I'd fall like the rain, I do now
+I do now
+I don't look back to spot where I fell
+Don't you look back, and don't you ever tell
+'Cause we know pride, it doesn't heal all that well
+All that well, all that well
+I need you to tell me you'll be right by my side
+When I feel alone, you'll be right by my side
+In a crazy world, you'll be right by my side
+I need you to tell me you'll be right by my side
+When I feel alone, you'll be right by my side
+In a crazy world...
+And I need you to tell me you'll be right by my side
+When I feel alone, you'll be right by my side
+You'll be right by my side";
 
 	// Here we split it into lines.
 	$lyrics = explode( "\n", $lyrics );
@@ -50,8 +49,8 @@ Dolly'll never go away again";
 }
 
 // This just echoes the chosen line, we'll position it later.
-function hello_dolly() {
-	$chosen = hello_dolly_get_lyric();
+function by_my_side() {
+	$chosen = by_my_side_get_lyric();
 	$lang   = '';
 	if ( 'en_' !== substr( get_user_locale(), 0, 3 ) ) {
 		$lang = ' lang="en"';
@@ -59,14 +58,14 @@ function hello_dolly() {
 
 	printf(
 		'<p id="dolly"><span class="screen-reader-text">%s </span><span dir="ltr"%s>%s</span></p>',
-		__( 'Quote from Hello Dolly song, by Jerry Herman:', 'hello-dolly' ),
+		__( 'By My Side by Copeland:', 'By-My-Side' ),
 		$lang,
 		$chosen
 	);
 }
 
 // Now we set that function up to execute when the admin_notices action is called.
-add_action( 'admin_notices', 'hello_dolly' );
+add_action( 'admin_notices', 'by_my_side' );
 
 // We need some CSS to position the paragraph.
 function dolly_css() {
