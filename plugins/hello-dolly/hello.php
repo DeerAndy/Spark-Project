@@ -1,19 +1,20 @@
 <?php
 /**
- * @package by_my_side
+ * @package hello_dolly
+ * @author Andy Crawford
  * @version 1.7.2
  */
 /*
 Plugin Name: Hello Dolly
 Plugin URI: http://wordpress.org/plugins/hello-dolly/
-Description: This is not just a plugin, it symbolizes the hope and enthusiasm of an entire generation summed up in two words sung most famously by Louis Armstrong: Hello, Dolly. When activated you will randomly see a lyric from <cite>Hello, Dolly</cite> in the upper right of your admin screen on every page.
-Author: Matt Mullenweg
+Description: One of my favorite songs by the band Copeland. When activated you will randomly see a lyric from <cite>By My Side</cite> in the upper right of your admin screen on every page.
+Author: Andy Crawford
 Version: 1.7.2
-Author URI: http://ma.tt/
+Author URI: http://dev.khadijacrawford.com/
 */
 
 function by_my_side_get_lyric() {
-	/** These are the lyrics to Hello Dolly */
+	/** These are the lyrics to By My Side - Copeland */
 	$lyrics = "It's takin' time, all this fear I pushed back to move on
 Beating me like a panic attack since you've gone
 And if I never fear to be more alone, I do now
