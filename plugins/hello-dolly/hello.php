@@ -13,45 +13,11 @@ Version: 1.7.2
 Author URI: http://dev.khadijacrawford.com/
 */
 
-function by_my_side_get_lyric() {
-	/** These are the lyrics to By My Side - Copeland */
-	$lyrics = "It's takin' time, all this fear I pushed back to move on
-Beating me like a panic attack since you've gone
-And if I never fear to be more alone, I do now
-I turn to see my faded tracks in the snow
-I've come so far with no idea where to go
-And if I never fear to be more alone, I do now
-I do now
-I need you to tell me you'll be right by my side
-When I feel alone, you'll be right by my side, ooh
-It's takin' hold of a fool with a fondness for pain
-And turn to run without a chance to explain
-And if I never thought I'd fall like the rain, I do now
-I do now
-I don't look back to spot where I fell
-Don't you look back, and don't you ever tell
-'Cause we know pride, it doesn't heal all that well
-All that well, all that well
-I need you to tell me you'll be right by my side
-When I feel alone, you'll be right by my side
-In a crazy world, you'll be right by my side
-I need you to tell me you'll be right by my side
-When I feel alone, you'll be right by my side
-In a crazy world...
-And I need you to tell me you'll be right by my side
-When I feel alone, you'll be right by my side
-You'll be right by my side";
-
-	// Here we split it into lines.
-	$lyrics = explode( "\n", $lyrics );
-
-	// And then randomly choose a line.
-	return wptexturize( $lyrics[ mt_rand( 0, count( $lyrics ) - 1 ) ] );
-}
+include "lyrics.php";
 
 // This just echoes the chosen line, we'll position it later.
 function by_my_side() {
-	$chosen = by_my_side_get_lyric();
+	$chosen = by_my_side_random_get_lyric();
 	$lang   = '';
 	if ( 'en_' !== substr( get_user_locale(), 0, 3 ) ) {
 		$lang = ' lang="en"';
